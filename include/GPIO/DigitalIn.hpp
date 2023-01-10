@@ -1,7 +1,7 @@
 #pragma once
 #include<Arduino.h>
 
-namespace Gpio {
+namespace gpio {
     class DigitalIn {
         public:
             /*delete unexpected constractors*/

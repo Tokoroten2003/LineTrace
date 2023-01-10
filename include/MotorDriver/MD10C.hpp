@@ -4,8 +4,8 @@
 #include"GPIO/AnalogOut.hpp"
 #include"GPIO/DigitalOut.hpp"
 
-namespace MotorDriver {
-    class MD10C : MotorDriver::MD<int16_t> {
+namespace motorDriver {
+    class MD10C : motorDriver::MD<int16_t> {
         private:
             Gpio::AnalogOut pwm;
             Gpio::DigitalOut dir;

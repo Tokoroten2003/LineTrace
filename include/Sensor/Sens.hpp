@@ -1,7 +1,7 @@
 #pragma once
 #include<Arduino.h>
 
-namespace Sensor {
+namespace sensor {
     template<typename valT> class Sens {
         protected:
             valT value;
