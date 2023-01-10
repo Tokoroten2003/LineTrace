@@ -2,8 +2,8 @@
 #include"Sensor/Sens.hpp"
 #include"GPIO/AnalogIn.hpp"
 
-namespace Sensor {
-    class PhotoRefSens : Sensor::Sens<uint16_t> {
+namespace sensor {
+    class PhotoRefSens : sensor::Sens<uint16_t> {
         private:
             Gpio::AnalogIn read_pin;
             uint16_t threshold_value;

@@ -1,12 +1,12 @@
 #include<Arduino.h>
 #include"GPIO/DigitalIn.hpp"
 
-Gpio::DigitalIn::DigitalIn(uint8_t pin) noexcept : pin_num(pin) {}
+gpio::DigitalIn::DigitalIn(uint8_t pin) noexcept : pin_num(pin) {}
 
-void Gpio::DigitalIn::init() {
+void gpio::DigitalIn::init() {
     pinMode(pin_num, INPUT);
 }
 
-bool Gpio::DigitalIn::read() {
+bool gpio::DigitalIn::read() {
     return digitalRead(pin_num);
 }

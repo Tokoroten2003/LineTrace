@@ -1,7 +1,7 @@
 #pragma once
 #include<Arduino.h>
 
-namespace MotorDriver {
+namespace motorDriver {
     template<typename PowT> class MD {
         protected:
             PowT power;
