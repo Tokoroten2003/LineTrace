@@ -3,10 +3,10 @@
 #include<memory>
 #include"all.hpp"
 
-Sensor::PhotoRefSens linesensor_r(6, 127);//しきい値を127に設定
-Sensor::PhotoRefSens linesensor_l(7, 127);//しきい値を127に設定
-MotorDriver::MD10C motor_r(9, 0);//PWMチャネルを0に設定
-MotorDriver::MD10C motor_l(11,1);//PWMチャネルを1に設定
+sensor::PhotoRefSens linesensor_r(6, 127);//しきい値を127に設定
+sensor::PhotoRefSens linesensor_l(7, 127);//しきい値を127に設定
+motorDriver::MD10C motor_r(9, 0);//PWMチャネルを0に設定
+motorDriver::MD10C motor_l(11,1);//PWMチャネルを1に設定
 
 /* モーター出力 */
 const uint16_t powerscale = 127;

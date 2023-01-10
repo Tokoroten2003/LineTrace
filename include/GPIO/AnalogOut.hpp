@@ -1,7 +1,7 @@
 #pragma once
 #include<Arduino.h>
 
-namespace Gpio {
+namespace gpio {
     class AnalogOut {
         public:
             /*delete unexpected constractors*/
