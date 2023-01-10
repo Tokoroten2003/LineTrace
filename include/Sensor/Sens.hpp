@@ -1,12 +1,10 @@
 #pragma once
-#include<Arduino.h>
+#include <Arduino.h>
 
 namespace sensor {
-    template<typename valT> class Sens {
-        protected:
-            valT value;
-        public:
-            virtual void init();
-            virtual valT getValue();
-    };
-}
+template <typename valT> class Sens {
+public:
+    virtual void init();
+    virtual valT getValue();
+};
+} // namespace sensor
