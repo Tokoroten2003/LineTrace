@@ -5,7 +5,7 @@
 namespace sensor {
     class PhotoRefSens : sensor::Sens<uint16_t> {
         private:
-            Gpio::AnalogIn read_pin;
+            gpio::AnalogIn read_pin;
             uint16_t threshold_value;
         protected:
             uint16_t value;
