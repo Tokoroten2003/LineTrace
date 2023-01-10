@@ -3,7 +3,7 @@
 
 gpio::DigitalOut::DigitalOut(uint8_t pin) noexcept : pin_num(pin) {}
 
-void Gpio::DigitalOut::init() {
+void gpio::DigitalOut::init() {
     pinMode(pin_num, OUTPUT);
 }
 

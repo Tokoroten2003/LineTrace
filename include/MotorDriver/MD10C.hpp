@@ -7,8 +7,8 @@
 namespace motorDriver {
     class MD10C : motorDriver::MD<int16_t> {
         private:
-            Gpio::AnalogOut pwm;
-            Gpio::DigitalOut dir;
+            gpio::AnalogOut pwm;
+            gpio::DigitalOut dir;
             bool use_dir_pin;
         protected:
             int16_t power;
