@@ -2,9 +2,9 @@
 #include <Arduino.h>
 
 namespace sensor {
-template <typename valT> class Sens {
+template <typename ValT> class Sens {
 public:
     virtual void init();
-    virtual valT getValue();
+    virtual ValT getValue();
 };
 } // namespace sensor
