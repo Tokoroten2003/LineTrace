@@ -16,15 +16,6 @@ void gpio::AnalogOut::write(uint32_t arg) {
     value = arg;
     ledcWrite(pwm_channel, value);
 }
-
-uint32_t gpio::AnalogOut::read() { return value; }
-
+const uint32_t &gpio::AnalogOut::read() const { return value; }
 void gpio::AnalogOut::setFreq(double freq) { frequency = freq; }
-
-double gpio::AnalogOut::getFreq() { return frequency; }
-
-void gpio::AnalogOut::setResol(uint8_t resolution_bits) {
-    resol_bits = resolution_bits;
-}
-
-uint8_t gpio::AnalogOut::getResol() { return resol_bits; }
+const double &gpio::AnalogOut::getFreq() const { return frequency; }
