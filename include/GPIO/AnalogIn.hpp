@@ -16,6 +16,6 @@ namespace gpio {
         const uint8_t pin_num;
 
         void init();    //setup()内で呼び出す
-        uint16_t read();    //入力値を返す
+        uint16_t read() const;    //入力値を返す
     };
 }

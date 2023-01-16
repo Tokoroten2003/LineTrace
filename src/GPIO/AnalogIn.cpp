@@ -7,6 +7,6 @@ void gpio::AnalogIn::init() {
     pinMode(pin_num, INPUT);
 }
 
-uint16_t gpio::AnalogIn::read() {
+uint16_t gpio::AnalogIn::read() const {
     return analogRead(pin_num);
 }

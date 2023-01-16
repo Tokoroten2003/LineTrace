@@ -22,9 +22,9 @@ public:
         uint16_t threshold); // ピン番号、しきい値を指定してコンストラクト
 
     void init() override;                  // setup()内で呼び出す
-    uint16_t getValue() override;          // 入力値を返す
+    uint16_t getValue() const override;          // 入力値を返す
     void setThreshold(uint16_t threshold); // しきい値を設定
-    uint16_t getThreshold();               // しきい値を返す
+    const uint16_t &getThreshold() const;               // しきい値を返す
     int8_t compareValue(); // 入力値としきい値の比較を返す
 };
 } // namespace sensor
