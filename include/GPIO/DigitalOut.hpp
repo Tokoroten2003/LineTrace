@@ -14,8 +14,7 @@ public:
     DigitalOut(const DigitalOut &&) = delete;
     DigitalOut &operator=(const DigitalOut &&) = delete;
 
-    explicit DigitalOut(
-        uint8_t pin) noexcept; // ピン番号を指定してコンストラクト
+    explicit DigitalOut(uint8_t pin) noexcept; // ピン番号を指定してコンストラクト
 
     const uint8_t pin_num;
 

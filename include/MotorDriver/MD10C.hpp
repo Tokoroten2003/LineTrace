@@ -5,7 +5,7 @@
 #include <Arduino.h>
 
 namespace motorDriver {
-class MD10C : motorDriver::MD<int16_t> {
+class MD10C : virtual motorDriver::MD<int16_t> {
 private:
     gpio::AnalogOut pwm;
     gpio::DigitalOut dir;
@@ -23,8 +23,7 @@ public:
     MD10C &operator=(const MD10C &&) = delete;
 
     MD10C(uint8_t pwm_pin, uint8_t pwm_ch);
-    MD10C(uint8_t pwm_pin, uint8_t pwm_ch, uint8_t dir_pin,
-          bool usage_dir = true);
+    MD10C(uint8_t pwm_pin, uint8_t pwm_ch, uint8_t dir_pin, bool usage_dir = true);
 
     void init() override;                    // setup()内で呼び出す
     void setPower(int16_t pow = 0) override; // powerの値を設定

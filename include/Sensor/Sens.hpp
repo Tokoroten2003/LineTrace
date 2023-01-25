@@ -4,7 +4,7 @@
 namespace sensor {
 template <typename ValT> class Sens {
 public:
-    virtual void init();
-    virtual ValT getValue() const;
+    virtual void init() = 0;
+    virtual ValT getValue() const = 0;
 };
 } // namespace sensor
