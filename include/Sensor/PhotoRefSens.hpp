@@ -3,7 +3,7 @@
 #include <Arduino.h>
 
 namespace sensor {
-class PhotoRefSens : virtual sensor::Sens<uint16_t> {
+class PhotoRefSens : sensor::Sens<uint16_t> {
 private:
     gpio::AnalogIn read_pin;
     uint16_t threshold_value;
