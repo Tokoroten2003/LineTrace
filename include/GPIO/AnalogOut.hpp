@@ -5,7 +5,6 @@ namespace gpio {
     class AnalogOut {
         private:
             uint8_t pwm_channel;
-            double frequency;
             uint32_t value;
 
         public:
@@ -20,6 +19,7 @@ namespace gpio {
 
             const uint8_t pin_num;
             const uint8_t resol_bits;
+            const double frequency;
 
             void init();    //setup()内で呼び出す
             void write(uint32_t arg);   //argの値を出力
