@@ -14,8 +14,7 @@ public:
     AnalogIn(uint8_t pin); // ピン番号を指定してコンストラクト
 
     const uint8_t pin_num;
-
-    void init();     // setup()内で呼び出す
-    uint16_t read(); // 入力値を返す
+    void init();    //setup()内で呼び出す
+    uint16_t read() const;    //入力値を返す
 };
-} // namespace gpio
+}
