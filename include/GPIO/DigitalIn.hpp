@@ -5,11 +5,11 @@ namespace gpio {
 class DigitalIn {
 public:
     /*delete unexpected constractors*/
-    DigitalIn() = delete;
-    DigitalIn(const DigitalIn &) = delete;
-    DigitalIn &operator=(const DigitalIn &) = delete;
-    DigitalIn(const DigitalIn &&) = delete;
-    DigitalIn &operator=(const DigitalIn &&) = delete;
+    DigitalIn()                             = delete;
+    DigitalIn(const DigitalIn&)             = delete;
+    DigitalIn& operator=(const DigitalIn&)  = delete;
+    DigitalIn(const DigitalIn&&)            = delete;
+    DigitalIn& operator=(const DigitalIn&&) = delete;
 
     explicit DigitalIn(uint8_t pin) noexcept; // ピン番号を指定してコンストラクト
 

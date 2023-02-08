@@ -2,6 +2,7 @@
 #include "GPIO/AnalogOut.hpp"
 #include "GPIO/DigitalOut.hpp"
 #include "MotorDriver/MD.hpp"
+
 #include <Arduino.h>
 
 namespace motorDriver {
@@ -16,15 +17,14 @@ protected:
 
 public:
     /*delete unexpected constractors*/
-    MD10C() = delete;
-    MD10C(const MD10C &) = delete;
-    MD10C &operator=(const MD10C &) = delete;
-    MD10C(const MD10C &&) = delete;
-    MD10C &operator=(const MD10C &&) = delete;
+    MD10C()                         = delete;
+    MD10C(const MD10C&)             = delete;
+    MD10C& operator=(const MD10C&)  = delete;
+    MD10C(const MD10C&&)            = delete;
+    MD10C& operator=(const MD10C&&) = delete;
 
     MD10C(uint8_t pwm_pin, uint8_t pwm_ch);
-    MD10C(uint8_t pwm_pin, uint8_t pwm_ch, uint8_t dir_pin,
-          bool usage_dir = true);
+    MD10C(uint8_t pwm_pin, uint8_t pwm_ch, uint8_t dir_pin, bool usage_dir = true);
 
     void init() override;                    // setup()内で呼び出す
     void setPower(int16_t pow = 0) override; // powerの値を設定
