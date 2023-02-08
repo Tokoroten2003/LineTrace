@@ -13,24 +13,27 @@ motorDriver::MD10C motor_l(11, 1);         // PWMチャネルを1に設定
 const uint16_t powerscale = 127;
 
 void set_motorpower() {
-    if (linesensor_r.compareValue() == 1 && linesensor_l.compareValue() != 1) { // 左のセンサーのみ線上 -> 右に旋回
+    if (linesensor_r.compareValue() == 1 && linesensor_l.compareValue() != 1) {
+        // 左のセンサーのみ線上 -> 右に旋回
         motor_r.setPower(powerscale);
         motor_l.setPower(-powerscale);
-    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() == 1) { // 右のセンサーのみ線上
-                                                                                       // -> 左に旋回
+    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() == 1) {
+        // 右のセンサーのみ線上 -> 左に旋回
         motor_r.setPower(-powerscale);
         motor_l.setPower(powerscale);
-    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() != 1) { // 左右のセンサーともに線上にない
-                                                                                       // -> 直進
+    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() != 1) {
+        // 左右のセンサーともに線上にない -> 直進
         motor_r.setPower(powerscale);
         motor_l.setPower(powerscale);
-    } else { // 左右のセンサーともに線上 -> 後進
+    } else {
+        // 左右のセンサーともに線上 -> 後進
         motor_r.setPower(-powerscale);
         motor_l.setPower(-powerscale);
     }
 }
 
-void run(uint delay_time) { // 走らせるだけ
+void run(uint delay_time) {
+    // 走らせるだけ
     motor_r.run();
     motor_l.run();
     delay(delay_time);
