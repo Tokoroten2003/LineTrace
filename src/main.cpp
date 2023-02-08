@@ -13,7 +13,7 @@ motorDriver::MD10C motor_l(11, 1);         // PWMチャネルを1に設定
 /* モーター出力 */
 const uint16_t powerscale = 127;
 
-void setMotorPower() {
+void set_motor_power() {
     if (linesensor_r.compareValue() == 1 && linesensor_l.compareValue() != 1) {
         // 左のセンサーのみ線上 -> 右に旋回
         motor_r.setPower(powerscale);
@@ -48,6 +48,6 @@ void setup() {
 }
 
 void loop() {
-    setMotorPower();
+    set_motor_power();
     run(10);
 }
