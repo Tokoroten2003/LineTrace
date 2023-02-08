@@ -8,11 +8,11 @@ private:
 
 public:
     /*delete unexpected constractors*/
-    DigitalOut() = delete;
-    DigitalOut(const DigitalOut &) = delete;
-    DigitalOut &operator=(const DigitalOut &) = delete;
-    DigitalOut(const DigitalOut &&) = delete;
-    DigitalOut &operator=(const DigitalOut &&) = delete;
+    DigitalOut()                              = delete;
+    DigitalOut(const DigitalOut&)             = delete;
+    DigitalOut& operator=(const DigitalOut&)  = delete;
+    DigitalOut(const DigitalOut&&)            = delete;
+    DigitalOut& operator=(const DigitalOut&&) = delete;
 
     explicit DigitalOut(uint8_t pin) noexcept; // ピン番号を指定してコンストラクト
 

@@ -1,4 +1,5 @@
 #include "all.hpp"
+
 #include <Arduino.h>
 #include <memory>
 #include <vector>
@@ -15,10 +16,12 @@ void set_motorpower() {
     if (linesensor_r.compareValue() == 1 && linesensor_l.compareValue() != 1) { // 左のセンサーのみ線上 -> 右に旋回
         motor_r.setPower(powerscale);
         motor_l.setPower(-powerscale);
-    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() == 1) { // 右のセンサーのみ線上 -> 左に旋回
+    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() == 1) { // 右のセンサーのみ線上
+                                                                                       // -> 左に旋回
         motor_r.setPower(-powerscale);
         motor_l.setPower(powerscale);
-    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() != 1) { // 左右のセンサーともに線上にない -> 直進
+    } else if (linesensor_r.compareValue() != 1 && linesensor_l.compareValue() != 1) { // 左右のセンサーともに線上にない
+                                                                                       // -> 直進
         motor_r.setPower(powerscale);
         motor_l.setPower(powerscale);
     } else { // 左右のセンサーともに線上 -> 後進

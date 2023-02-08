@@ -1,4 +1,5 @@
 #include "GPIO/DigitalOut.hpp"
+
 #include <Arduino.h>
 
 gpio::DigitalOut::DigitalOut(uint8_t pin) noexcept : pin_num(pin) {}

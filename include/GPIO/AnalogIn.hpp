@@ -5,11 +5,11 @@ namespace gpio {
 class AnalogIn {
 public:
     /*delete unexpected constractors*/
-    AnalogIn() = delete;
-    AnalogIn(const AnalogIn &) = delete;
-    AnalogIn &operator=(const AnalogIn &) = delete;
-    AnalogIn(const AnalogIn &&) = delete;
-    AnalogIn &operator=(const AnalogIn &&) = delete;
+    AnalogIn()                            = delete;
+    AnalogIn(const AnalogIn&)             = delete;
+    AnalogIn& operator=(const AnalogIn&)  = delete;
+    AnalogIn(const AnalogIn&&)            = delete;
+    AnalogIn& operator=(const AnalogIn&&) = delete;
 
     AnalogIn(uint8_t pin); // ピン番号を指定してコンストラクト
 
